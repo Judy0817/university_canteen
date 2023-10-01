@@ -127,16 +127,16 @@ class _HomeState extends State<Home> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                         Text(
-                              "Popular Canteen",
-                              style: TextStyle(
-                                fontSize: 16,
-                                height: 1,
-                                letterSpacing: 1,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xffffffff),
-                              ),
+                          Text(
+                            "Popular Canteen",
+                            style: TextStyle(
+                              fontSize: 16,
+                              height: 1,
+                              letterSpacing: 1,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xffffffff),
                             ),
+                          ),
                         ],
                       ),
                       SizedBox(
@@ -153,7 +153,9 @@ class _HomeState extends State<Home> {
                               ),
                             );
                           }),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.01,),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.01,
+                          ),
                           CanteenSet("Gym Canteen", "salad.png", () async {
                             Navigator.push(
                               context,
@@ -167,23 +169,33 @@ class _HomeState extends State<Home> {
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          CanteenSet("Rahula Canteen", "fries.png", () async {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const OpenCanteen(),
-                              ),
-                            );
-                          },),
-                          SizedBox(width: MediaQuery.of(context).size.width * 0.01,),
-                          CanteenSet("Green Canteen", "taco.png", () async {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const OpenCanteen(),
-                              ),
-                            );
-                          },),
+                          CanteenSet(
+                            "Rahula Canteen",
+                            "fries.png",
+                            () async {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const OpenCanteen(),
+                                ),
+                              );
+                            },
+                          ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.01,
+                          ),
+                          CanteenSet(
+                            "Green Canteen",
+                            "taco.png",
+                            () async {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const OpenCanteen(),
+                                ),
+                              );
+                            },
+                          ),
                         ],
                       ),
                     ],

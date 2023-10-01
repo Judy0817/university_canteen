@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:university_canteen/screens/food_descrip.dart';
+import 'package:university_canteen/screens/opencanteen.dart';
 
 class viewCart extends StatefulWidget {
   const viewCart({Key? key}) : super(key: key);
@@ -18,8 +20,8 @@ class _viewCartState extends State<viewCart> {
           child: Stack(
             children: [
               Container(
-                height: double.infinity,
-                width: double.infinity,
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("images/background.jpg"),
@@ -42,20 +44,33 @@ class _viewCartState extends State<viewCart> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Text("Order Details",
-                            style: TextStyle (
-                              fontSize:  40,
-                              fontWeight:  FontWeight.w700,
-                              height: 1 ,
-                              letterSpacing:  2,
-                              color:  Color(0xffffffff),
-                            ),),
+                          Text(
+                            "Order Details",
+                            style: TextStyle(
+                              fontSize: 40,
+                              fontWeight: FontWeight.w700,
+                              height: 1,
+                              letterSpacing: 2,
+                              color: Color(0xffffffff),
+                            ),
+                          ),
                         ],
+                      ),
+                      SizedBox(height: 30),
+                      Container(
+                        width: double.infinity,
+                        height: 100,
+                        //color: Colors.grey.withOpacity(0.5),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(30),
+                          color: Color.fromRGBO(217, 217, 217, 0.5),
+                        ),
+                        // Add any child widgets or content here
                       ),
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

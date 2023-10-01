@@ -12,8 +12,11 @@ Future<void> main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class DefaultFirebaseOptions {
+  static var currentPlatform;
+}
 
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
@@ -25,4 +28,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

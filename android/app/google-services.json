@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "654420114466",
+    "project_id": "universitycanteen-61d67",
+    "storage_bucket": "universitycanteen-61d67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654420114466:android:3cab431719c30d35c09e7b",
+        "android_client_info": {
+          "package_name": "com.example.university_canteen"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa_27au7Cfx71m8ASUef8CxZaMvHWJmQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

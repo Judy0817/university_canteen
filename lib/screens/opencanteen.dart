@@ -14,6 +14,7 @@ class OpenCanteen extends StatefulWidget {
 }
 
 class _OpenCanteenState extends State<OpenCanteen> {
+  int quantity = 0;
   Widget SearchBar() {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +48,11 @@ class _OpenCanteenState extends State<OpenCanteen> {
           width: MediaQuery.of(context).size.width * 0.04,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () {
+            setState(() {
+              quantity++;
+            });
+          },
           child: Container(
             width: 50.0,
             height: 50.0,
@@ -306,8 +311,13 @@ class _OpenCanteenState extends State<OpenCanteen> {
                                       ),
                                       child: TextButton(
                                         onPressed: () {
-                                          const snackBar = SnackBar(
-                                              content: Text('Added to cart'));
+                                          setState(() {
+                                            quantity++;
+                                          });
+                                          var snackBar = SnackBar(
+                                            content: Text(
+                                                'Added to cart:${names[index]} $quantity'),
+                                          );
                                           ScaffoldMessenger.of(context)
                                               .showSnackBar(snackBar);
                                         },
